@@ -10,7 +10,7 @@ public class Lesson5 {
         checkPositiveOrNegative(6);
         checkPositiveOrNegative(-3);
         checkPositiveOrNegative(0);
-        System.out.println("isNegative(-5) = " + isNegative(-5));
+        System.out.println("isNegative(-5) = " + isNegative(-6));
         System.out.println("isNegative(10) = " + isNegative(10));
         System.out.println("isNegative(0) = " + isNegative(0));
         printStringNTimes("Привет", 3);
