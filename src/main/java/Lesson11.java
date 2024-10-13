@@ -6,7 +6,7 @@ public class Lesson11 {
 
         // Создание массива котов
         Cat[] cats = new Cat[3];
-        cats[0] = new Cat("Мурка", bowl);
+        cats[0] = new Cat("Мурик", bowl);
         cats[1] = new Cat("Барсик", bowl);
         cats[2] = new Cat("Снежок", bowl);
 
