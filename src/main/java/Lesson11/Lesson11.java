@@ -1,3 +1,5 @@
+package Lesson11;
+
 public class Lesson11 {
     public static void main(String[] args) {
         // Часть 1: Создание животных
@@ -59,7 +61,7 @@ public class Lesson11 {
 }
 
 //Задание 1
-// Интерфейс Shape
+// Интерфейс Lesson11.Shape
 interface Shape {
     double getArea(); // Метод для расчета площади
     double getPerimeter(); // Метод для расчета периметра
@@ -75,7 +77,7 @@ interface Shape {
     }
 }
 
-// Класс Animal
+// Класс Lesson11.Animal
 class Animal {
     private static int animalCount = 0;
 
@@ -96,7 +98,7 @@ class Animal {
     }
 }
 
-// Класс Dog
+// Класс Lesson11.Dog
 class Dog extends Animal {
     private static int dogCount = 0;
     private String name;
@@ -130,7 +132,7 @@ class Dog extends Animal {
     }
 }
 
-// Класс Cat
+// Класс Lesson11.Cat
 class Cat extends Animal {
     private static int catCount = 0;
     private String name;
@@ -185,7 +187,7 @@ class Cat extends Animal {
     }
 }
 
-// Класс Bowl (миска с едой)
+// Класс Lesson11.Bowl (миска с едой)
 class Bowl {
     private int foodAmount;
 
@@ -217,7 +219,7 @@ class Bowl {
 }
 
 //Задание 2
-// Класс Circle
+// Класс Lesson11.Circle
 class Circle implements Shape {
     private double radius;
     private String fillColor;
@@ -250,7 +252,7 @@ class Circle implements Shape {
     }
 }
 
-// Класс Rectangle
+// Класс Lesson11.Rectangle
 class Rectangle implements Shape {
     private double width;
     private double height;
@@ -285,7 +287,7 @@ class Rectangle implements Shape {
     }
 }
 
-// Класс Triangle
+// Класс Lesson11.Triangle
 class Triangle implements Shape {
     private double sideA;
     private double sideB;
