@@ -7,7 +7,7 @@ public class Lesson13 {
     public static void main(String[] args) {
         // Часть 1: Подсчет уникальных слов
         String[] words = {
-                "apple", "banana", "orange", "apple", "banana", "kiwi", "orange", "grape", "kiwi", "apple",
+                "apple", "banana", "orange", "pineapple", "apple", "banana", "kiwi", "orange", "grape", "kiwi", "apple",
                 "peach", "banana", "grape", "kiwi", "melon", "peach", "apple", "banana", "grape", "kiwi"
         };
         WordCounter wordCounter = new WordCounter();
