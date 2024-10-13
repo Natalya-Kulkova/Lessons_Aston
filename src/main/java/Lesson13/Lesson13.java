@@ -20,6 +20,7 @@ public class Lesson13 {
         phoneBook.add("Петров", "345-678");
         phoneBook.add("Сидоров", "901-234");
         phoneBook.add("Сидоров", "567-890");
+        phoneBook.add("Сидоров", "567-892");
         System.out.println("Телефоны Иванова: " + phoneBook.get("Иванов"));
         System.out.println("Телефоны Сидорова: " + phoneBook.get("Сидоров"));
         System.out.println("Телефоны Петрова: " + phoneBook.get("Петров"));
