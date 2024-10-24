@@ -36,7 +36,7 @@ public class Lesson15 {
 
         // 3. Проверить работу ссылки "Подробнее о сервисе"
         WebElement moreInfoLink = driver.findElement(By.linkText("Подробнее о сервисе"));
-        assertNotNull(moreInfoLink, "Ссылка 'Подробнее о сервисе' не найдена");
+        assertNotNull(moreInfoLink, "Ссылка 'Подробнеее о сервисе' не найдена");
         moreInfoLink.click();
         assertTrue(driver.getCurrentUrl().contains("service-info"), "Ссылка 'Подробнее о сервисе' не работает");
 
