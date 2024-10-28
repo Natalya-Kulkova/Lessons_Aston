@@ -28,11 +28,11 @@ public class Lesson15 {
         driver.get("https://mts.by");
 
         // Принять куки
-        WebElement acceptCookiesButton = new WebDriverWait(driver, Duration.ofSeconds(10))
+        WebElement acceptCookiesButton = new WebDriverWait(driver, Duration.ofSeconds(15))
                 .until(ExpectedConditions.elementToBeClickable(By.id("bxdynamic_cookies_agreement-pt5_start")));
         acceptCookiesButton.click();
 
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
     @Test
