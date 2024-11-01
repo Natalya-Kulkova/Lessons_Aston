@@ -1,59 +1,30 @@
 package Lesson10;
-import java.math.BigDecimal;
 
 public class Employee {
-    private String firstName; // Имя
-    private String lastName;  // Фамилия
-    private BigDecimal salary; // Зарплата
-    private String email;     // Email
-    private String phone;     // Телефон
-    private int age;          // Возраст
+    private String fullName; // ФИО
+    private String position; // Должность
+    private String email; // Email
+    private String phone; // Телефон
+    private double salary; // Зарплата
+    private int age; // Возраст
 
-    // Конструктор класса
-    public Employee(String firstName, String lastName, BigDecimal salary, String email, String phone, int age) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.salary = salary;
+    // Конструктор
+    public Employee(String fullName, String position, String email, String phone, double salary, int age) {
+        this.fullName = fullName;
+        this.position = position;
         this.email = email;
         this.phone = phone;
+        this.salary = salary;
         this.age = age;
     }
 
-    // Геттеры и сеттеры
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public BigDecimal getSalary() {
-        return salary;
-    }
-
-    public void setSalary(BigDecimal salary) {
-        this.salary = salary;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    // Метод для вывода информации об объекте
+    // Метод для вывода информации о сотруднике
     public void displayInfo() {
-        System.out.println("Имя: " + firstName + " " + lastName);
-        System.out.println("Зарплата: " + salary);
+        System.out.println("ФИО: " + fullName);
+        System.out.println("Должность: " + position);
         System.out.println("Email: " + email);
         System.out.println("Телефон: " + phone);
+        System.out.println("Зарплата: " + salary);
         System.out.println("Возраст: " + age);
         System.out.println();
     }
