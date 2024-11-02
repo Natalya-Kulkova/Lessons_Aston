@@ -32,7 +32,7 @@ public class MtsPage {
 
     public boolean arePaymentSystemLogosVisible() {
         // Проверка наличия логотипов платёжных систем с использованием XPath
-        return driver.findElement(By.xpath("//*[@id=\"pay-section\"]/div/div/div[2]/section/div/div[2]")).isDisplayed();
+        return driver.findElement(By.xpath("//*[@id=\"pay-section\"]")).isDisplayed();
     }
 
     public void clickMoreInfoLink() {

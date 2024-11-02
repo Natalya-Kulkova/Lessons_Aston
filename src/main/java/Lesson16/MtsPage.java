@@ -25,7 +25,7 @@ public class MtsPage {
                 acceptCookiesButton.click();
             }
         } catch (NoSuchElementException e) {
-            // Если элемент не найден, куки уже приняты или не требуется
+            // Если  элемент не найден, куки уже приняты или не требуется
         }
     }
 

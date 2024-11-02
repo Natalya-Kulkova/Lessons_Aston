@@ -39,7 +39,7 @@ public class MtsPageTest {
     @Test
     public void testContinueButton() {
         String phoneNumber = "297777777";
-        String expectedAmount = "100"; // Замените на ожидаемую сумму
+        String expectedAmount = "100";
         mtsPage.fillServiceFields(phoneNumber);
 
         // Проверка деталей после нажатия кнопки "Продолжить"

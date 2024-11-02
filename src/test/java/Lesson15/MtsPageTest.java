@@ -29,7 +29,6 @@ public class MtsPageTest {
     public void acceptCookies() {
         // Принять куки, если появляется соответствующий элемент
         try {
-            // Замените XPath на актуальный для кнопки принятия куки
             WebElement acceptCookiesButton = driver.findElement(By.xpath("//*[@id='cookie-agree']"));
             if (acceptCookiesButton.isDisplayed()) {
                 acceptCookiesButton.click();
