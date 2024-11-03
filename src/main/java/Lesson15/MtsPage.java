@@ -1,55 +1,57 @@
 package Lesson15;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class MtsPage {
     private WebDriver driver;
 
+    // Конструктор
     public MtsPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void acceptCookies() {
-        // Принять куки, если появляется соответствующий элемент
+    // Элементы страницы
+    private By serviceSelect = By.id("pay");
+    private By phoneInput = By.id("connection-phone");
+    private By sumInput = By.id("connection-sum");
+    private By emailInput = By.id("connection-email");
+    private By continueButton = By.cssSelector("button[type='submit']");
+    private By iframe = By.cssSelector(".bepaid-iframe");
+
+    // Методы для взаимодействия с элементами
+    public void selectService(String service) {
+        WebElement selectElement = driver.findElement(serviceSelect);
+        selectElement.click();
+        // Здесь можно добавить логику для выбора конкретной услуги из выпадающего списка
+    }
+
+    public void fillPhone(String phone) {
+        WebElement phoneField = driver.findElement(phoneInput);
+        phoneField.sendKeys(phone);
+    }
+
+    public void fillSum(String sum) {
+        WebElement sumField = driver.findElement(sumInput);
+        sumField.sendKeys(sum);
+    }
+
+    public void fillEmail(String email) {
+        WebElement emailField = driver.findElement(emailInput);
+        emailField.sendKeys(email);
+    }
+
+    public void clickContinue() {
+        WebElement continueBtn = driver.findElement(continueButton);
+        continueBtn.click();
+    }
+
+    public boolean isIframeDisplayed() {
         try {
-            WebElement acceptCookiesButton = driver.findElement(By.xpath("//*[@id='cookie-agree']"));
-            if (acceptCookiesButton.isDisplayed()) {
-                acceptCookiesButton.click();
-            }
-        } catch (NoSuchElementException e) {
-            // Если элемент не найден, куки уже приняты или не требуется
+            return driver.findElement(iframe).isDisplayed();
+        } catch (Exception e) {
+            return false; // Если элемент не найден, возвращаем false
         }
-    }
-
-    public String getBlockTitle() {
-        // Используем XPath для получения заголовка блока
-        WebElement titleElement = driver.findElement(By.xpath("//*[@id=\"pay-section\"]/div/div/div[2]/section/div/h2"));
-        return titleElement.getText();
-    }
-
-    public boolean arePaymentSystemLogosVisible() {
-        // Проверка наличия логотипов платёжных систем с использованием XPath
-        return driver.findElement(By.xpath("//*[@id=\"pay-section\"]")).isDisplayed();
-    }
-
-    public void clickMoreInfoLink() {
-        // Используем XPath для нахождения и клика по ссылке "Подробнее о сервисе"
-        WebElement moreInfoLink = driver.findElement(By.xpath("//*[@id=\"pay-section\"]/div/div/div[2]/section/div/a"));
-        moreInfoLink.click();
-    }
-
-    public void fillServiceFields(String phoneNumber) {
-        // Заполнение полей с использованием XPath
-        WebElement serviceField = driver.findElement(By.xpath("//*[@id=\"pay-section\"]/div/div/div[2]/section/div/div[1]/div[1]/div[2]/button/span[1]"));
-        serviceField.sendKeys("Услуги связи");
-
-        WebElement phoneField = driver.findElement(By.xpath("//*[@id=\"connection-phone\"]"));
-        phoneField.sendKeys(phoneNumber);
-
-        WebElement continueButton = driver.findElement(By.xpath("//*[@id=\"pay-connection\"]/button"));
-        continueButton.click();
     }
 }
